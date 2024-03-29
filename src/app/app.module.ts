@@ -7,19 +7,28 @@ import { MoviesComponent } from './movies/movies.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieComponent } from './movie/movie.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { BuyticketsComponent } from './buytickets/buytickets.component';
+import {FormsModule} from "@angular/forms";
+import {DatePipe} from "@angular/common";
+import { SeatselectionComponent } from './seatselection/seatselection.component';
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    BuyticketsComponent,
+    SeatselectionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MoviesComponent
+    MoviesComponent,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

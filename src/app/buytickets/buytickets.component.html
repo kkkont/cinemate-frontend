@@ -1,0 +1,11 @@
+<div class="buytickets">
+  <h2>{{schedule.movie.movieName}}</h2>
+  <p>{{formatDateTime(schedule.dateTime)}}, {{schedule.language}}</p>
+  <div class="ticket-selection">
+    <p>SELECT THE AMOUNT OF TICKETS</p>
+    <button (click)="decrementTickets()">-</button>
+    <input type="number" [(ngModel)]="numberOfTickets" readonly>
+    <button (click)="incrementTickets()">+</button>
+  </div>
+  <button class="proceed" (click)="proceedToSeatSelection(schedule,  numberOfTickets)">Proceed</button>
+</div>
