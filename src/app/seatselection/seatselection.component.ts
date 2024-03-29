@@ -37,6 +37,7 @@ export class SeatselectionComponent {
 
 
   selectSeat(seat: Seat): void {
+    this.selectedSeatsBoolean = false;
     this.selectedSeats = [];
 
     this.seats.forEach(s => {

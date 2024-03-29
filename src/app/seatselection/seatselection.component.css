@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   background: rgba(1, 29, 10, 0.45);
-  margin:auto;
+  margin:40px auto auto auto;
   width:40%;
   padding:40px;
   border-radius: 25px;
@@ -74,12 +74,11 @@ button:hover{
 }
 
 .buttons{
-  margin-top:20px;
   display:flex;
   align-items: center;
   width:30%;
   justify-content: center;
-  margin:auto;
+  margin:20px auto 70px auto;
 }
 .backbutton{
   width:20%;
@@ -87,4 +86,6 @@ button:hover{
   color:white;
 }
 
-
+*{
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+}

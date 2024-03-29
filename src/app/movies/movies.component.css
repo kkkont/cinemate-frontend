@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-
 }
 .moviediv img{
   width:70%;
@@ -65,4 +64,11 @@
 .movieinf{
   display:flex;
   align-items: center;
+}
+
+*{
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+}
+.border{
+  padding-bottom:4%;
 }

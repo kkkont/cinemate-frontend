@@ -71,3 +71,7 @@ button:hover{
 .buttons button{
   margin:10px;
 }
+
+*{
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+}
