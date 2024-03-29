@@ -1,3 +1,15 @@
-<p>seatselection works!</p>
-<p>{{schedule.movie.movieName}}</p>
-<p>{{numberOfTickets}}</p>
+<div class="seatselection">
+  <div class="cinema-hall">
+    <h1>Select Your Seats to {{schedule.movie.movieName}}</h1>
+    <h4>SCREEN</h4>
+    <div *ngFor="let rowSeats of filteredSeats; let rowIndex = index" class="row">
+      <p>{{rowIndex + 1}}</p>
+      <div *ngFor="let seat of rowSeats" class="seat"
+           [ngClass]="{'occupied': seat.occupied, 'recommended': seat.recommended, 'selected': seat.selected}"
+           (click)="selectSeat(seat)">
+        <div class="seat-number">{{ seat.seatNumber }}</div>
+      </div>
+    </div>
+  </div>
+  <button>Buy Tickets</button>
+</div>

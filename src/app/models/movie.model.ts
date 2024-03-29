@@ -30,5 +30,6 @@ export interface Seat {
   seatNumber: number;
   occupied: boolean;
   recommended: boolean;
+  selected: boolean;
   schedule: Schedule;
 }
