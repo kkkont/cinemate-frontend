@@ -1,0 +1,8 @@
+<div class="moviesdiv">
+  <div class="moviediv" *ngFor="let movie of movies">
+    <h2>{{ movie.movieName }}</h2>
+    <img src="{{movie.photo}}">
+    <p>{{ movie.genreNames }}</p>
+    <p>Age Restriction: {{ movie.ageRestriction }}</p>
+  </div>
+</div>
