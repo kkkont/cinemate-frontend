@@ -1,0 +1,12 @@
+<h3>SCHEDULE</h3>
+<div class="schedulemain">
+  <div *ngFor="let schedule of schedules" class="schedule">
+    <div class="scheduleinf">
+      <!-- Display schedule details here -->
+      <p>{{ formatDate(schedule.dateTime) }}</p>
+      <p>{{ schedule.language }}</p>
+    </div>
+    <button>Buy Tickets</button>
+  </div>
+
+</div>

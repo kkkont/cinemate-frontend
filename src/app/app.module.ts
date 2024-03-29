@@ -5,9 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './movies/movies.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieComponent } from './movie/movie.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MovieComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,

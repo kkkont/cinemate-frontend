@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
-import { Movie } from '../models/movie.model';
+import {Genre, Movie} from '../models/movie.model';
 import { MoviesService } from '../service/movies.service';
+import { Router } from '@angular/router';
 import {NgForOf} from "@angular/common";
 
 @Component({
@@ -15,12 +16,15 @@ import {NgForOf} from "@angular/common";
 export class MoviesComponent implements OnInit {
   movies: Movie[] = [];
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesService: MoviesService, private router:Router) { }
 
   ngOnInit() {
     this.moviesService.getMovies().subscribe(movies => {
       this.movies = movies;
       console.log(movies)
     });
+  }
+  onMovieClick(movieId: number): void {
+    this.router.navigate(['/movies', movieId]);
   }
 }

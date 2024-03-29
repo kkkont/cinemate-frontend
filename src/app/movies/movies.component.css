@@ -1,3 +1,51 @@
-.moviesdiv{
-  display:flex;
+.moviesdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+
 }
+.moviediv img{
+  width:70%;
+}
+.moviediv{
+  color: #ffffff ;
+  display:flex;
+  flex-direction: column;
+  background: rgb(1, 29, 10);
+  border-radius: 25px;
+  padding:40px;
+  margin:20px;
+  width:30%;
+  align-items: center;
+}
+.moviediv:hover{
+  background: rgb(2, 59, 29);
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav h1{
+  color: rgba(255, 255, 255, 0.72);
+  padding-left:10%;
+  font-size:50px;
+}
+
+.nav div{
+  background: rgb(2, 59, 29);
+  padding:10px;
+  border-radius: 10px;
+}
+.nav label{
+  color: rgba(255, 255, 255, 0.72);
+  padding-left:10px;
+}
+.nav select{
+  background: rgb(183, 183, 183);
+  border-radius: 5px;
+}
+
