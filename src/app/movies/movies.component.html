@@ -1,6 +1,6 @@
 <div class="nav">
   <h1>Cinemate</h1>
-  <div>
+  <div class="filters">
     <label for="genre">Genre:</label>
     <select id="genre">
       <option value="all">All</option>
@@ -27,7 +27,10 @@
 <div class="moviesdiv">
   <div class="moviediv" *ngFor="let movie of movies" (click)="onMovieClick(movie.id)">
     <img src="{{movie.photo}}">
+    <h2>{{movie.movieName}}</h2>
+    <div class="movieinf">
     <p>{{ movie.genreNames }}</p>
-    <p>Age Restriction: {{ movie.ageRestriction }}</p>
+    <p>{{ movie.ageRestriction }}</p>
+    </div>
   </div>
 </div>

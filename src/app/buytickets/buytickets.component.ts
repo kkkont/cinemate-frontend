@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Schedule} from "../models/movie.model";
-import {DatePipe} from "@angular/common";
+import {DatePipe, Location} from "@angular/common";
 import {Router} from "@angular/router";
 
 
@@ -11,13 +11,13 @@ import {Router} from "@angular/router";
 })
 export class BuyticketsComponent implements OnInit {
   schedule!: Schedule;
-  numberOfTickets = 1; // Start with 1 ticket
+  numberOfTickets = 1;
 
-  constructor(private datePipe: DatePipe,private router:Router) { }
+  constructor(private datePipe: DatePipe,private router:Router,private location: Location) { }
 
   ngOnInit(): void {
     this.schedule = history.state.schedule;
-    console.log(this.schedule); // Log the schedule to verify it's passed correctly
+    console.log(this.schedule);
   }
 
   formatDateTime(dateTime: string): string {
@@ -25,7 +25,7 @@ export class BuyticketsComponent implements OnInit {
   }
 
   incrementTickets(): void {
-    if (this.numberOfTickets < 6) {
+    if (this.numberOfTickets < 4) {
       this.numberOfTickets++;
     }
   }
@@ -38,5 +38,9 @@ export class BuyticketsComponent implements OnInit {
 
   proceedToSeatSelection(schedule: any, numberOfTickets: number): void {
     this.router.navigate(['/seat-selection'], { state: { schedule: schedule, numberOfTickets: numberOfTickets } });
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

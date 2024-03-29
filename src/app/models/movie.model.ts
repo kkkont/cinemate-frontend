@@ -33,3 +33,7 @@ export interface Seat {
   selected: boolean;
   schedule: Schedule;
 }
+
+export interface UserHistory{
+  schedule: Schedule;
+}

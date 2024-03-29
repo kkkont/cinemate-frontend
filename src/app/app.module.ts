@@ -11,13 +11,15 @@ import { BuyticketsComponent } from './buytickets/buytickets.component';
 import {FormsModule} from "@angular/forms";
 import {DatePipe} from "@angular/common";
 import { SeatselectionComponent } from './seatselection/seatselection.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
     ScheduleComponent,
     BuyticketsComponent,
-    SeatselectionComponent
+    SeatselectionComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

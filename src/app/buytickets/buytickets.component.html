@@ -7,5 +7,8 @@
     <input type="number" [(ngModel)]="numberOfTickets" readonly>
     <button (click)="incrementTickets()">+</button>
   </div>
+  <div class="buttons">
+  <button (click)="goBack()" class="backbutton">Back</button>
   <button class="proceed" (click)="proceedToSeatSelection(schedule,  numberOfTickets)">Proceed</button>
+  </div>
 </div>

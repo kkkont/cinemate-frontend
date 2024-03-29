@@ -1,50 +1,47 @@
-.moviedetaildiv{
-  margin:5%;
-  border-radius: 25px;
-  background: rgba(1, 29, 10, 0.45);
-  color:#ffffff;
-  display:flex;
-  justify-content: space-around;
-
-}
-.moviedetaildiv img{
-  padding:20px;
-  height:20%;
-  width:30%;
-}
-.moviedetaildiv1{
-  padding:10px;
+.checkout-container{
   display: flex;
   flex-direction: column;
+  background: rgba(1, 29, 10, 0.45);
+  margin: 5% auto auto auto;
+  width:40%;
+  padding:40px;
+  border-radius: 25px;
+  color:#ffffff;
 }
-
-.movienameandtags{
+.schedule-details{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  background: rgba(1, 29, 10, 0.45);
+
   padding:20px;
-}
-.movienameandtags h2{
-  padding-right: 30px;
-}
-.movienameandtags p{
-  padding:10px;
-  margin:5px;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(1, 29, 10);
-  border-radius: 5px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.71);
 }
 
-.movieinf{
+.split{
   display:flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
-button {
-  background-color: #e55b5b;
-  color:white;
+.selected-seats{
+  display: flex;
+  flex-direction: column;
+  background: rgba(1, 29, 10, 0.45);
+
+  padding:20px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.71);
+}
+.checkout{
+  display: flex;
+  margin-top:5%;
+}
+
+button{
+  background-color: #c2fbd7;
   border-radius: 100px;
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
@@ -53,13 +50,23 @@ button {
   text-decoration: none;
   transition: all 250ms;
   border: 0;
-  height:40px;
-  font-size: 16px;
+  font-size: 20px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+
+  margin:2% auto 2% auto;
 }
 
+.checkoutbutton{
+  font-size:25px;
+  width:30%;
+}
+.backbutton{
+  background-color: #e55b5b;
+  color:white;
+  width:20%;
+}
 
 button:hover{
   box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;

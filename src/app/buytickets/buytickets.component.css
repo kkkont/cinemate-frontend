@@ -30,13 +30,13 @@
   text-decoration: none;
   transition: all 250ms;
   border: 0;
+   height:40px;
   font-size: 16px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
  .proceed{
-   margin-top:20px;
    font-size:20px;
  }
 
@@ -53,8 +53,21 @@ button:hover{
   text-align: center;
   font-weight: bold;
   width:50px;
-  padding: 0; /* Remove padding */
+  padding: 0;
   margin: 0;
   font-size: 16px; /
 }
 
+.buttons{
+  margin-top:20px;
+  display:flex;
+  align-items: center;
+}
+.backbutton{
+  background-color: #e55b5b;
+  color:white;
+}
+
+.buttons button{
+  margin:10px;
+}

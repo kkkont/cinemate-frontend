@@ -1,14 +1,15 @@
 <div *ngIf="movie" class="moviedetaildiv">
   <img src="{{movie.photo}}">
   <div class="moviedetaildiv1">
-
     <div class="movienameandtags">
-      <h2>{{ movie.movieName }}, {{movie.releaseYear}}</h2>
-      <p>{{movie.ageRestriction}}</p>
-      <p>{{movie.runningTimeInMinutes}} min</p>
+      <div class="movieinf">
+        <h2>{{ movie.movieName }}, {{movie.releaseYear}}</h2>
+        <p>{{movie.ageRestriction}}</p>
+        <p>{{movie.runningTimeInMinutes}} min</p>
+      </div>
+      <button (click)="goBack()" class="backbutton">Back</button>
     </div>
     <h3>{{movie.genreNames}}</h3>
-
     <p>{{ movie.description }}</p>
     <app-schedule [movieId]="movie.id"></app-schedule>
   </div>

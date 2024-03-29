@@ -1,7 +1,6 @@
 .moviesdiv {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   justify-content: space-around;
 
@@ -13,7 +12,7 @@
   color: #ffffff ;
   display:flex;
   flex-direction: column;
-  background: rgb(1, 29, 10);
+  background: rgba(1, 29, 10, 0.42);
   border-radius: 25px;
   padding:40px;
   margin:20px;
@@ -21,7 +20,7 @@
   align-items: center;
 }
 .moviediv:hover{
-  background: rgb(2, 59, 29);
+  background: rgba(1, 29, 10, 0.61);
 }
 
 .nav{
@@ -35,17 +34,35 @@
   font-size:50px;
 }
 
-.nav div{
-  background: rgb(2, 59, 29);
-  padding:10px;
+.filters{
+  background: rgba(1, 29, 10, 0.42);
   border-radius: 10px;
+  padding:30px;
 }
 .nav label{
   color: rgba(255, 255, 255, 0.72);
-  padding-left:10px;
+  padding:0px 5px 0px 10px;
+
 }
 .nav select{
-  background: rgb(183, 183, 183);
+  background: rgba(255, 253, 253, 0.31);
+  color:white;
+  padding: 0px 10px 0px 10px;
+  text-align: center;
+  width:60px;
   border-radius: 5px;
 }
 
+
+.movieinf p{
+  padding:10px;
+  margin:5px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(1, 29, 10);
+  border-radius: 5px;
+}
+
+.movieinf{
+  display:flex;
+  align-items: center;
+}

@@ -11,5 +11,8 @@
       </div>
     </div>
   </div>
-  <button>Buy Tickets</button>
+  <div class="buttons">
+    <button (click)="goBack()" class="backbutton">Back</button>
+    <button [disabled]="!selectedSeatsBoolean" (click)="checkOut(schedule)">Buy Tickets</button>
+  </div>
 </div>

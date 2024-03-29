@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Movie} from "../models/movie.model";
 import {ActivatedRoute} from "@angular/router";
 import {MoviesService} from "../service/movies.service";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-movie',
@@ -13,7 +14,7 @@ export class MovieComponent {
   movies: Movie[] = [];
   movie: Movie | undefined;
 
-  constructor(private route: ActivatedRoute,private moviesService:MoviesService) {}
+  constructor(private route: ActivatedRoute,private moviesService:MoviesService,private location: Location) {}
 
   ngOnInit(): void {
     this.movieId = Number(this.route.snapshot.paramMap.get('id'));
@@ -22,6 +23,9 @@ export class MovieComponent {
       this.movie = this.movies.find(m => m.id === this.movieId) ;
       console.log(this.movie);
     });
-    // Fetch movie data based on this.movieId...
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

@@ -1,0 +1,25 @@
+<div class="checkout-container">
+  <h1>Checkout</h1>
+  <h4>Schedule Details</h4>
+  <div class="schedule-details">
+    <div class="split">
+    <p>{{schedule.movie.movieName }}</p>
+    <p>{{formatDate( schedule.dateTime) }}</p>
+    </div>
+    <p>Language: {{ schedule.language }},  Subtitles: {{ schedule.subtitles }}</p>
+  </div>
+  <h4>Selected Seats</h4>
+  <div class="selected-seats">
+
+    <div class="seats">
+    <p *ngFor="let seat of selectedSeats">
+      Row: {{ seat.seatRow }}, Seat: {{ seat.seatNumber }}
+    </p>
+    </div>
+  </div>
+  <div class="checkout">
+    <button (click)="goBack()" class="backbutton">Back</button>
+    <button (click)="onCheckout()" class="checkoutbutton">Checkout</button>
+  </div>
+</div>
+

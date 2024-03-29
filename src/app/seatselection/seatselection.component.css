@@ -50,6 +50,7 @@
 button{
   background-color: #c2fbd7;
   border-radius: 100px;
+
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
   color: green;
   cursor: pointer;
@@ -64,11 +65,26 @@ button{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width:20%;
-  margin:2% auto 2% auto;
+  margin:10px;
 }
 
 button:hover{
   box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
 }
+
+.buttons{
+  margin-top:20px;
+  display:flex;
+  align-items: center;
+  width:30%;
+  justify-content: center;
+  margin:auto;
+}
+.backbutton{
+  width:20%;
+  background-color: #e55b5b;
+  color:white;
+}
+
+

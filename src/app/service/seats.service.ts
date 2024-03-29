@@ -7,7 +7,7 @@ import {Schedule, Seat} from "../models/movie.model";
   providedIn: 'root'
 })
 export class SeatsService {
-  private apiUrl = 'http://localhost:8080/cinemate/seats'; // Adjust the URL as necessary
+  private apiUrl = 'http://localhost:8080/cinemate/seats';
 
   constructor(private http: HttpClient) { }
 
