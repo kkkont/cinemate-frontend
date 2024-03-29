@@ -72,7 +72,6 @@ export class SeatselectionComponent {
     this.selectedSeatsBoolean = this.seats.some(s => s.selected);
   }
 
-
   checkOut(schedule: Schedule): void {
     this.router.navigate(['/checkout'], { state: { schedule: schedule, selectedSeats:this.selectedSeats} });
   }
