@@ -1,14 +1,16 @@
+<h1>Cinemate</h1>
 <div class="buytickets">
   <h2>{{schedule.movie.movieName}}</h2>
   <p>{{formatDateTime(schedule.dateTime)}}, {{schedule.language}}</p>
-  <div class="ticket-selection">
-    <p>SELECT THE AMOUNT OF TICKETS</p>
-    <button (click)="decrementTickets()">-</button>
-    <input type="number" [(ngModel)]="numberOfTickets" readonly>
-    <button (click)="incrementTickets()">+</button>
+
+  <p>SELECT THE AMOUNT OF TICKETS</p>
+  <div class="input-group">
+    <button id="decrement" (click)="decrementTickets()">-</button>
+    <input type="number" id="input" value="1" [(ngModel)]="numberOfTickets" readonly>
+    <button id="increment" (click)="incrementTickets()">+</button>
   </div>
   <div class="buttons">
-  <button (click)="goBack()" class="backbutton">Back</button>
+  <button (click)="goBack()" id="backbutton">Back</button>
   <button class="proceed" (click)="proceedToSeatSelection(schedule,  numberOfTickets)">Proceed</button>
   </div>
 </div>

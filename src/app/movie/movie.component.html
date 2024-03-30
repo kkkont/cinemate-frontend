@@ -1,3 +1,4 @@
+<h1>Cinemate</h1>
 <div class="border">
   <div *ngIf="movie" class="moviedetaildiv">
     <img src="{{movie.photo}}">
@@ -11,7 +12,7 @@
         <button (click)="goBack()" class="backbutton">Back</button>
       </div>
       <h3>{{movie.genreNames}}</h3>
-      <div [innerHTML]="movie.description"></div>
+      <div class="justify-text" [innerHTML]="movie.description"></div>
       <app-schedule [movieId]="movie.id"></app-schedule>
     </div>
   </div>

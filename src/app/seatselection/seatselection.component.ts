@@ -63,6 +63,10 @@ export class SeatselectionComponent {
       }
     }
 
+    if (endSeat.seatNumber - startSeat.seatNumber + 1 !== this.numberOfTickets) {
+      return;
+    }
+
     this.seats.forEach(s => {
       if (s.seatRow === startSeat.seatRow && s.seatNumber >= startSeat.seatNumber && s.seatNumber <= endSeat.seatNumber) {
         s.selected = true;
