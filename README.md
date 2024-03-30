@@ -18,7 +18,7 @@ Angular and TypeScript frontend is designed to work with the cinemate-backend (h
   npm install
   ```
 4. Run the application
-    ```
+  ```
   ng serve
   ```
 5. Access the application in your browser at http://localhost:4200.
