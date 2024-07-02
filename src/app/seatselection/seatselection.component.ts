@@ -30,7 +30,7 @@ export class SeatselectionComponent {
   }
 
   private filterSeatsByRow(): void {
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 9; i++) {
       this.filteredSeats[i] = this.seats.filter(seat => seat.seatRow === i + 1);
     }
   }
@@ -48,7 +48,7 @@ export class SeatselectionComponent {
     if (seat.occupied) {
       return;
     }
-    let allowedSeat = 9 - this.numberOfTickets;
+    let allowedSeat = 10 - this.numberOfTickets;
     if(seat.seatNumber > allowedSeat) return;
 
     let startSeat = seat;

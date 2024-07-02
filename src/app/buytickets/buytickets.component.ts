@@ -25,7 +25,7 @@ export class BuyticketsComponent implements OnInit {
   }
 
   incrementTickets(): void {
-    if (this.numberOfTickets < 4) {
+    if (this.numberOfTickets < 9) {
       this.numberOfTickets++;
     }
   }
