@@ -1,7 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from '../models/movie.model';
 import { MoviesService } from '../service/movies.service';
-import {NgForOf} from "@angular/common";
+import { NgForOf } from "@angular/common";
 
 @Component({
   selector: 'app-movies',
@@ -10,10 +10,12 @@ import {NgForOf} from "@angular/common";
     NgForOf
   ],
   templateUrl: './movies.component.html',
-  styleUrl: './movies.component.css'
+  styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  movies: Movie[] = []; // Initialize the movies property with an empty array
+  movies: Movie[] = [];
+  genre: string = 'all';
+  age: string = 'all';
 
   constructor(private moviesService: MoviesService) { }
 
@@ -22,7 +24,11 @@ export class MoviesComponent implements OnInit {
   }
 
   fetchMovies(): void {
-    this.moviesService.getMovies()
+    this.moviesService.getMovies(this.genre, this.age)
       .subscribe(movies => this.movies = movies);
+  }
+
+  onFilterChange(): void {
+    this.fetchMovies();
   }
 }

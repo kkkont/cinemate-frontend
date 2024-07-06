@@ -1,29 +1,42 @@
-import { Component, OnInit} from '@angular/core';
-import {Genre, Movie} from '../models/movie.model';
+import { Component, OnInit } from '@angular/core';
+import { Genre, Movie } from '../models/movie.model';
 import { MoviesService } from '../service/movies.service';
 import { Router } from '@angular/router';
-import {NgForOf} from "@angular/common";
+import { NgForOf } from "@angular/common";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-movies',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    FormsModule
   ],
   templateUrl: './movies.component.html',
-  styleUrl: './movies.component.css'
+  styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
   movies: Movie[] = [];
+  genre: string = 'all';
+  age: string = 'all';
 
-  constructor(private moviesService: MoviesService, private router:Router) { }
+  constructor(private moviesService: MoviesService, private router: Router) { }
 
   ngOnInit() {
-    this.moviesService.getMovies().subscribe(movies => {
+    this.fetchMovies();
+  }
+
+  fetchMovies(): void {
+    this.moviesService.getMovies(this.genre, this.age).subscribe(movies => {
       this.movies = movies;
-      console.log(movies)
+      console.log(movies);
     });
   }
+
+  onFilterChange(): void {
+    this.fetchMovies();
+  }
+
   onMovieClick(movieId: number): void {
     this.router.navigate(['/movies', movieId]);
   }

@@ -3,32 +3,27 @@
     <h1>Cinemate</h1>
     <div class="filters">
       <label for="genre">Genre:</label>
-      <select id="genre">
+      <select id="genre" [(ngModel)]="genre" (change)="onFilterChange()">
         <option value="all">All</option>
-        <option value="action">Adventure</option>
-        <option value="biography">Biography</option>
-        <option value="comedy">Comedy</option>
-        <option value="drama">Drama</option>
-        <option value="historicaldrama">Historical drama</option>
-        <option value="sciencefiction">Science Fiction</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Biography">Biography</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Historical Drama">Historical drama</option>
+        <option value="Science Fiction">Science Fiction</option>
       </select>
       <label for="age">Age restriction:</label>
-      <select id="age">
+      <select id="age" [(ngModel)]="age" (change)="onFilterChange()">
         <option value="all">All</option>
-        <option value="pg">PG</option>
-        <option value="pg13">PG13</option>
-      </select>
-      <label for="language">Language:</label>
-      <select id="language">
-        <option value="all">All</option>
-        <option value="english">English</option>
+        <option value="PG">PG</option>
+        <option value="PG13">PG13</option>
       </select>
     </div>
   </div>
   <div class="moviesdiv">
     <div class="moviediv" *ngFor="let movie of movies" (click)="onMovieClick(movie.id)">
-      <img src="{{movie.photo}}">
-      <h2>{{movie.movieName}}</h2>
+      <img [src]="movie.photo" alt="Movie photo">
+      <h2>{{ movie.movieName }}</h2>
       <div class="movieinf">
         <p>{{ movie.genreNames }}</p>
         <p>{{ movie.ageRestriction }}</p>
