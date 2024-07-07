@@ -1,59 +1,63 @@
-.moviedetaildiv{
-  margin:5%;
+.moviedetaildiv {
+  margin: 5%;
   border-radius: 25px;
   background: rgba(1, 29, 10, 0.45);
-  color:#ffffff;
-  display:flex;
+  color: #ffffff;
+  display: flex;
   justify-content: space-around;
 
 }
-.moviedetaildiv img{
-  padding:20px;
-  height:20%;
-  width:30%;
+
+.moviedetaildiv img {
+  padding: 20px;
+  height: 20%;
+  width: 30%;
 }
-.moviedetaildiv1{
-  padding:10px;
+
+.moviedetaildiv1 {
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.movienameandtags{
+.movienameandtags {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:20px;
+  padding: 20px;
 }
-.movienameandtags h2{
+
+.movienameandtags h2 {
   padding-right: 30px;
 }
-.movienameandtags p{
-  padding:10px;
-  margin:5px;
+
+.movienameandtags p {
+  padding: 10px;
+  margin: 5px;
   color: rgba(255, 255, 255, 0.7);
   background: rgba(1, 29, 10);
   border-radius: 5px;
 }
 
-.movieinf{
-  display:flex;
+.movieinf {
+  display: flex;
   align-items: center;
 }
 
 button {
   background-color: #e55b5b;
-  color:white;
+  color: white;
   border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
   cursor: pointer;
   display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;
   border: 0;
-  height:40px;
+  height: 40px;
   font-size: 16px;
   user-select: none;
   -webkit-user-select: none;
@@ -61,25 +65,128 @@ button {
 }
 
 
-button:hover{
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+button:hover {
+  box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
 }
 
-*{
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+#detailsbutton {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  fill: white;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.border{
-  padding-bottom:2%;
+
+#detailsbutton:focus {
+  color: white;
+}
+
+#detailsbutton:hover {
+  transform: none;
+  border-color: green;
+  color: #33ff33;
+  fill: green;
+}
+
+#detailsbutton:active {
+  border-color: green;
+  color: green;
+  fill: green;
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}
+
+
+* {
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+}
+
+.border {
+  padding-bottom: 2%;
 }
 
 .justify-text {
   padding-right: 20px;
   text-align: justify;
 }
- h1{
+
+h1 {
   color: rgba(255, 255, 255, 0.72);
-  padding-left:10%;
-  font-size:50px;
+  padding-left: 10%;
+  font-size: 50px;
 }
+
+HTML LessResult Skip Results Iframe
+EDIT ON
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  max-width: 100%;
+
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+th {
+  text-align: left;
+  background-color: #55608f;
+}
+
+
+
+
+
+
+

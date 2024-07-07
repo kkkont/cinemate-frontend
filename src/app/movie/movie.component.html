@@ -5,14 +5,39 @@
     <div class="moviedetaildiv1">
       <div class="movienameandtags">
         <div class="movieinf">
-          <h2>{{ movie.movieName }}, {{movie.releaseYear}}</h2>
+          <h2>{{ movie.movieName }}</h2>
+          <p>{{movie.releaseYear}}</p>
           <p>{{movie.ageRestriction}}</p>
           <p>{{movie.runningTimeInMinutes}} min</p>
+          <p>IMDb: {{movie.imdbRating}}</p>
+          <p>Rotten Tomatoes: {{movie.rtRating}}</p>
         </div>
         <button (click)="goBack()" class="backbutton">Back</button>
       </div>
+
       <h3>{{movie.genreNames}}</h3>
       <div class="justify-text" [innerHTML]="movie.description"></div>
+      <button id="detailsbutton" (click)="toggleDetails()">Show details</button>
+      <div *ngIf="showDetails" class="moviedetailtable">
+        <table>
+          <tr>
+            <td>Director</td>
+            <td>{{ movie.director }}</td>
+          </tr>
+          <tr>
+            <td>Writers</td>
+            <td>{{ movie.writer }}</td>
+          </tr>
+          <tr>
+            <td>Actors</td>
+            <td>{{ movie.actors }}</td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>{{ movie.country }}</td>
+          </tr>
+        </table>
+      </div>
       <app-schedule [movieId]="movie.id"></app-schedule>
     </div>
   </div>

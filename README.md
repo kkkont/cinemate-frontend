@@ -1,8 +1,8 @@
 # CinemateFrontend
-Angular and TypeScript frontend is designed to work with the cinemate-backend (https://github.com/kkkont/cinemate-backend). It provides simple and a user-friendly interface for selecting movies, viewing movie schedules, selecting seats and checking out.
+Angular and TypeScript frontend is designed to work with the cinemate-backend (https://github.com/kkkont/cinemate-backend). It provides simple and a user-friendly interface for filtering movies, selecting movies, viewing movie schedules, selecting seats and checking out.
 
 ## Features
-- **Movie Selection**: User can browse and select movies they want to watch.
+- **Movie Selection**: User can browse, filter and select movies they want to watch.
 - **Seance Viewing**: User can view schedule for selected movie.
 - **Seat Selection**: User can select seats for the chosen seance.
 - **Checkout**: User can proceed to checkout after selecting seats.

@@ -6,6 +6,12 @@ export interface Movie {
   ageRestriction: string;
   releaseYear: number;
   photo: string;
+  director:string;
+  writer:string;
+  actors:string;
+  country:string;
+  imdbRating:string;
+  rtRating:string;
   genres: Genre[];
   genreNames:string;
 }

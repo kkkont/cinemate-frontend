@@ -12,6 +12,7 @@ import { Location } from "@angular/common";
 export class MovieComponent implements OnInit {
   movieId!: number;
   movie: Movie | undefined;
+  showDetails: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,6 +30,9 @@ export class MovieComponent implements OnInit {
       this.movie = movie;
       console.log(this.movie);
     });
+  }
+  toggleDetails() {
+    this.showDetails = !this.showDetails; // Toggle showDetails flag
   }
 
   goBack(): void {
